@@ -8,8 +8,8 @@ let offsetX = 0;
 let offsetY = 0;
 
 function preload() {
-  img1 = loadImage("Drawing.png"); // base image
-  img2 = loadImage("Drawing2.png"); // zoomed-in image
+  img1 = loadImage("Drawing.png"); 
+  img2 = loadImage("Drawing2.png"); 
 }
 
 function setup() {
@@ -21,12 +21,12 @@ function draw() {
 
   push();
 
-  // Move + zoom
+ 
   translate(width / 2 + offsetX, height / 2 + offsetY);
   scale(scaleFactor);
   imageMode(CENTER);
 
-  // 🔥 SWITCH IMAGE BASED ON ZOOM
+  
   if (scaleFactor < 2) {
     image(img1, 0, 0);
   } else {
